@@ -27,7 +27,7 @@ ai_resume_ranker/
 
 🧪 How to Run
 
-git clone https://github.com/your-username/ai_resume_ranker.git
+git clone https://github.com/MIDHUN5832/ai_resume_ranker.git
 cd ai_resume_ranker
 pip install -r requirements.txt
 python resume_ranker.py
