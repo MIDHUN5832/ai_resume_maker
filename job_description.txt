@@ -1,0 +1,3 @@
+We are hiring a Data Analyst with expertise in Python programming, data wrangling, and statistical analysis. 
+The ideal candidate should be proficient in using Pandas and NumPy for data manipulation, and capable of building visualizations using Matplotlib or Seaborn.
+Experience in SQL and exploratory data analysis (EDA) is required. Familiarity with scikit-learn is a plus.
