@@ -1,50 +1,80 @@
-🧠 AI Resume Ranker
-A Python-based tool that analyzes and ranks resumes based on how well they match a given job description using Natural Language Processing (NLP).
+# 🧠 AI Resume Ranker
 
-🚀 Features
-📝 Input a job description (as text file)
+An AI-powered resume ranking tool that compares resumes to a job description using TF-IDF and cosine similarity.
 
-📂 Analyze multiple resumes (PDF or text files)
+---
 
-📊 Automatically ranks resumes by relevance
+## 📂 Project Structure
 
-⚙️ Uses TF-IDF vectorization + cosine similarity for scoring
-
-📂 Project Structure
 ai_resume_ranker/
-├── resume_ranker.py       # Python script with ranking logic
-├── resumes/               # Folder containing sample resumes
-├── job_description.txt    # Job description file
-├── results.csv            # Output file with ranked results
-├── requirements.txt       # Python dependencies
-└── README.md              # This file
-⚙️ Tech Stack
-🐍 Python 3.8+
+│
+├── resumes/ # Folder containing sample resumes (PDF)
+│ ├── resume1.pdf
+│ └── resume2.pdf
+│
+├── job_description.txt # Sample job description text
+├── resume_ranker.py # Main Python script
+├── ranking_results.csv # Output file with ranked results
+├── requirements.txt # Dependencies
+├── LICENSE # MIT License
+└── README.md # This file
 
-🧠 NLP: scikit-learn, nltk
+yaml
+Copy
+Edit
 
-📄 File handling: PyPDF2, os
+---
 
-🧪 How to Run
+## 🚀 How It Works
 
+1. Reads a job description from `job_description.txt`
+2. Loads all PDF resumes from the `resumes/` folder
+3. Applies TF-IDF vectorization using `scikit-learn`
+4. Calculates cosine similarity between the job description and each resume
+5. Ranks resumes by relevance and exports the results to `ranking_results.csv`
+
+---
+
+## 🧪 How to Run
+
+```bash
 git clone https://github.com/MIDHUN5832/ai_resume_ranker.git
 cd ai_resume_ranker
 pip install -r requirements.txt
 python resume_ranker.py
-💡 How It Works
-Loads the job description from job_description.txt
+📦 Requirements
+Install dependencies using:
 
-Reads all .pdf or .txt files from the resumes/ folder
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Required Libraries:
 
-Extracts text and cleans it
+scikit-learn
 
-Uses TF-IDF + cosine similarity to score each resume
+PyPDF2
 
-Saves a ranked list in results.csv
+📄 Sample Data
+This repo includes example data for quick testing:
 
-📜 License
+✅ A sample job description (job_description.txt)
+
+✅ Two sample resumes in PDF format (resumes/ folder)
+
+✅ Output CSV file (ranking_results.csv) showing similarity scores
+
+📊 Output
+After running the script:
+
+Console displays ranked resume results
+
+A CSV file (ranking_results.csv) is generated like this:
+
+Resume	Similarity Score
+resume1.pdf	0.66
+resume2.pdf	0.04
+
+🛡 License
 This project is licensed under the MIT License.
-
-🙌 Developed By
-Midhun Kunjumon
-Built with ❤️ using Python and NLP
+© 2025 Midhun Kunjumon
